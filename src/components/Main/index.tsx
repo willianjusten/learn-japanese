@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Symbol from 'components/Symbol'
 
@@ -9,14 +9,22 @@ import * as S from './styles'
 
 const Main = () => {
   const [pairs, setPairs] = useState(hiragana)
+  const [voice, setVoice] = useState<SpeechSynthesisVoice | null>(null)
+
+  useEffect(() => {
+    const voices = window.speechSynthesis.getVoices()
+
+    const jpVoice = voices.find((voice) => /ja-JP/.test(voice.lang))
+    setVoice(jpVoice || voices[0])
+  }, [])
 
   const speak = (word: string) => {
     // japanese voice
     const utterance = new SpeechSynthesisUtterance()
-    const voice = window.speechSynthesis.getVoices()[12]
 
     // Utterance properties
     utterance.text = word
+    utterance.lang = 'ja-JP'
     utterance.voice = voice
     utterance.rate = 0.4
 
