@@ -22,6 +22,7 @@ export const TitleWrapper = styled.div`
 export const Description = styled.h2`
   font-size: 2rem;
   font-weight: 400;
+  margin: 2rem 0 3rem;
 `
 
 export const Image = styled.img`
@@ -30,6 +31,10 @@ export const Image = styled.img`
   ${media.lessThan('medium')`
     width: 8rem;
   `}
+`
+
+export const Small = styled.small`
+  font-size: 1.2rem;
 `
 
 export const Selector = styled.button`

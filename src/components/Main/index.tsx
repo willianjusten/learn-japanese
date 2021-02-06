@@ -39,11 +39,17 @@ const Main = () => {
         <S.Image src="img/japanese-woman.svg" alt="Cute japanese woman" />
       </S.TitleWrapper>
       <S.Description>
-        Click on each symbol and learn the pronunciation.
+        <p>Click on each symbol and learn the pronunciation.</p>
+        <S.Small>
+          * This application uses the new Web Speech API, so it might not work
+          correctly in some browsers/devices.
+        </S.Small>
       </S.Description>
 
-      <S.Selector onClick={() => setPairs(hiragana)}>Hiragana</S.Selector>
-      <S.Selector onClick={() => setPairs(katakana)}>Katakana</S.Selector>
+      <div>
+        <S.Selector onClick={() => setPairs(hiragana)}>Hiragana</S.Selector>
+        <S.Selector onClick={() => setPairs(katakana)}>Katakana</S.Selector>
+      </div>
 
       <S.Grid>
         {pairs.map(([japanese, english]) => (
