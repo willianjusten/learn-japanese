@@ -1,20 +1,14 @@
 {
-  "name": "React Avançado - Boilerplate",
-  "short_name": "React Avançado",
+  "name": "Learn Japanese",
+  "short_name": "Learn Japanese",
   "icons": [
     {
-      "src": "/img/icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/img/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "/img/icon.png",
+      "type": "image/png"
     }
   ],
   "background_color": "#06092B",
-  "description": "Boilerplate utilizando Typescript, React, NextJS e Styled Components!",
+  "description": "Learn hiragana and katakana in an easy way.",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#06092B"

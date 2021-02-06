@@ -1,21 +1,22 @@
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import Main from '.'
 
 describe('<Main />', () => {
-  it('should render the heading', () => {
-    const { container } = render(<Main />)
+  it('should render hiragana', () => {
+    render(<Main />)
 
-    expect(
-      screen.getByRole('heading', { name: /react avançado/i })
-    ).toBeInTheDocument()
-
-    expect(container.firstChild).toMatchSnapshot()
+    expect(screen.getByText(/あ/i)).toBeInTheDocument()
   })
 
-  it('should render the colors correctly', () => {
-    const { container } = render(<Main />)
+  it('should render hiragana/katakana when selected', () => {
+    render(<Main />)
 
-    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
+    userEvent.click(screen.getByText(/Katakana/i))
+    expect(screen.getByText(/ア/i)).toBeInTheDocument()
+
+    userEvent.click(screen.getByText(/Hiragana/i))
+    expect(screen.getByText(/あ/i)).toBeInTheDocument()
   })
 })

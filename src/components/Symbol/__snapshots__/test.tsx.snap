@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Symbol /> should render the heading 1`] = `
+.c0 {
+  cursor: pointer;
+  background: #f231a5;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px #be0374;
+  font-size: 30px;
+  -webkit-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+}
+
+.c0:hover {
+  box-shadow: none;
+}
+
+<div
+  class="c0"
+>
+  <h1>
+    あ
+  </h1>
+  <p>
+    a
+  </p>
+</div>
+`;
