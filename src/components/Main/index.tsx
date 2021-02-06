@@ -13,12 +13,11 @@ const Main = () => {
   const speak = (word: string) => {
     // japanese voice
     const utterance = new SpeechSynthesisUtterance()
-    const voice = window.speechSynthesis.getVoices()[12]
 
     // Utterance properties
     utterance.text = word
-    utterance.voice = voice
     utterance.rate = 0.4
+    utterance.lang = 'ja-JP'
 
     window.speechSynthesis.speak(utterance)
   }
