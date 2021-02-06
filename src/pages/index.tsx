@@ -1,5 +1,6 @@
 import Main from 'components/Main'
 import { NextSeo } from 'next-seo'
+import GithubCorner from 'react-github-corner'
 
 export default function Home() {
   return (
@@ -24,6 +25,11 @@ export default function Home() {
           site: '@Willian_justen',
           cardType: 'summary_large_image'
         }}
+      />
+      <GithubCorner
+        href="https://github.com/willianjusten/learn-japanese"
+        octoColor="#06092b"
+        bannerColor="#f231a5"
       />
       <Main />
     </>
